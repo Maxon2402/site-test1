@@ -1,0 +1,1067 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Общие стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0 auto; /* Центрирование блока */
+    animation: fadeIn 1s ease;
+}
+
+
+.main-header {
+    background-color: rgb(51, 33, 172);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 55px;
+    overflow: hidden;
+    background-color: white;
+    padding: 25px;
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.left-nav ul,
+.right-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li:not(:last-child) {
+    margin-right: 0; /* Убираем отступ для всех кнопок, кроме последней */
+}
+
+
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+    border-radius: 25px;
+    padding: 20px 25px;
+}
+
+nav li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.left-nav {
+    margin-left: 30px; /* Растягиваем влево */
+}
+
+.right-nav {
+    text-align: right; /* Выравниваем вправо */
+}
+
+.right-nav li {
+    display: inline;
+    margin-right: 10px;
+    border-radius: 25px;
+    padding: 20px 25px;
+}
+
+.right-nav li:first-child a {
+    border: 2px solid blue;
+    border-radius: 25px;
+    padding: 15px 20px;
+}
+
+.right-nav li:last-child a {
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 25px;
+    padding: 15px 20px;
+}
+
+.right-nav li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Ваши текущие стили остаются неизменными */
+
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    overflow: hidden; /* Добавляем overflow: hidden */
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 3;
+    height: auto; /* Задаем фиксированную высоту */
+    overflow-y: auto; /* Добавляем вертикальный скролл, если содержимое не помещается */
+    width: 30%;
+    margin: 20px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Добавьте тень */
+    transition: transform 0.3s ease-in-out; /* Добавьте анимацию */
+    
+}
+
+
+
+.popup-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Растягиваем содержимое по вертикали */
+}
+
+
+.popup-container h3 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Измените шрифт */
+    font-size: 24px; /* Измените размер текста */
+}
+
+.popup-container form label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #000000;
+    
+}
+
+.popup-container form input {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 2px solid #000000; /* Добавляем обводку вокруг полей ввода */
+    border-radius: 15px; /* Закругляем углы */
+    padding: 10px; /* Добавляем внутренний отступ */
+    margin-bottom: 10px; /* Увеличиваем отступ снизу */
+}
+
+.popup-container form button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;    
+}
+
+.popup-container form button:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+.popup-container form button,
+.popup-container form input {
+    transition: 0.3s;
+}
+
+.popup-container button.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 35px;
+    color: #000;
+    cursor: pointer;
+}
+
+
+
+
+/* Второй блок */
+.second-section {
+    background-color: rgb(51, 33, 172);
+    color: white;
+    text-align: center;
+    padding: 4%;
+    height: auto;
+    margin: 0 auto; /* Центрирование блока */
+}
+
+
+.second-header-content h1 {
+    font-size: 4.375em; /* Увеличенный размер шрифта */
+    font-weight: bold;
+    margin: 2%;
+}
+
+.second-header-content h2 {
+    font-size: 5em; /* Увеличенный размер шрифта */
+    font-weight: bold;
+    margin: 0;
+}
+
+.second-header-content p {
+    font-size: 1.25em; /* Увеличенный размер шрифта */
+    margin-top: 3%;
+}
+
+.scroll-button {
+    background-color: rgb(51, 33, 172);
+    color: white;
+    border: none;
+    padding: 1% ; /* Увеличенные отступы кнопки */
+    font-size: 1.20em; /* Увеличенный размер шрифта */
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.scroll-button img {
+    margin-right: 1.43%;
+    width: 7em; /* Увеличенные размеры изображения */
+    height: 7em; /* Увеличенные размеры изображения */
+}
+
+
+
+
+/* Блок с информацией о компании */
+.company-info {
+    color: #000;
+    display: flex;
+    text-align: left;
+    padding: 15px;
+    margin: 0 auto;
+    position: relative;
+    height: 450px;
+    width: 90%;
+    justify-content: center;
+    max-width: 1400px;
+    
+}
+
+
+
+.info-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.company-details {
+    flex: 1;
+    margin-right: 2.86%;
+    margin-top: 3%;
+}
+
+.company-details h3 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.company-details p {
+    font-size: 21px; /* Немного увеличим размер шрифта */
+    line-height: 1.6; /* Увеличим межстрочный интервал для лучшей читаемости */
+    color: rgb(32, 32, 32); /* Черный цвет текста для лучшего контраста */
+    margin-bottom: 15px; /* Небольшой отступ снизу для улучшения визуального восприятия */
+}
+
+.company-details p:first-child {
+    font-weight: bold; /* Сделаем первый абзац полужирным */
+}
+
+.company-details p a {
+    color: #5E8DFF; /* Цвет ссылок */
+    text-decoration: underline; /* Подчеркивание для ссылок */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.company-details p a:hover {
+    color: #2A4CFF; /* Цвет ссылок при наведении */
+}
+
+.logo-photo {
+    max-width: 350px;
+    margin-right: 40px;
+}
+
+.logo-photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Родительская секция */
+.services-section {
+    background-color: #f0f0f0; /* Цвет фона блока услуг */
+    text-align: center; /* Центрирование текста */
+}
+
+
+.services-section::before {
+    content: "";
+    position: relative;
+    left: 50%;
+    width: 100%; /* Длина гирлянды */
+    height: 5px;
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); /* Цвета гирлянды */
+    border-radius: px; /* Радиус закругления для создания эффекта лампочек */
+    transform: translateX(-50%);
+    background-size: 200% 100%;
+    animation: garland 2s linear infinite; /* Анимация */
+    margin: -50px 0 30px; /* Отрицательное значение margin-top поднимет линию выше */
+    display: block;
+}
+
+
+
+
+/* Контейнер для заголовков */
+.services-titles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+
+
+.services-section h2 {
+    color:  rgb(51, 33, 172); /* Синий цвет для мини-заголовка "Услуги" */
+    font-size: 1.5em; /* Размер мини-заголовка */
+}
+
+.services-section h1 {
+    color: #000; /* Черный цвет для жирного заголовка */
+    font-size: 2.2em; /* Размер жирного заголовка */
+}
+
+.services-section p {
+    color: #333; /* Цвет подзаголовка */
+    font-size: 1.5em; /* Размер подзаголовка */
+}
+
+/* Стили для сетки блоков */
+
+/* Стили для родительского контейнера */
+.grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: space-between;
+    
+}
+
+/* Стили для каждого блока в сетке */
+.grid-item {
+    display: flex;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    height: auto;
+    width: 85%;
+    position: relative;
+    border: 3px solid #000000; /* Добавлен стиль для обводки */
+}
+
+
+
+.grid-item .icon-container {
+    align-items: center;
+    margin-right: 20px;
+    position: absolute;
+    top: 45%;
+    left: 2%;
+}
+
+.grid-item .icon-container img {
+    width: 60px;
+    height: 60px;
+    margin-top: -90%;
+}
+
+.grid-item .text-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для первой колонки */
+.grid-item:nth-child(2n+1) {
+    margin-left: 9%; 
+}
+
+/* Стили для заголовка */
+.grid-item h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+
+/* Стили для описания услуги */
+.grid-item p {
+    font-size: 16px;
+    color: #1f1f1f;
+}
+
+
+.grid-item:nth-child(1) h3 {
+    margin-right: 36%;
+}
+
+/* Стили для описания услуги в первом блоке */
+.grid-item:nth-child(1) p {
+    margin-right: 11%;
+}
+
+.grid-item:nth-child(2) h3 {
+    margin-right: 19%;
+}
+
+/* Стили для описания услуги в первом блоке */
+.grid-item:nth-child(2) p {
+    margin-right: 21%;
+}
+
+.grid-item:nth-child(3) h3 {
+    margin-right: 23%;
+}
+
+/* Стили для описания услуги в первом блоке */
+.grid-item:nth-child(3) p {
+    margin-right: 1%;
+}
+
+.grid-item:nth-child(4) h3 {
+    margin-right: 26%;
+}
+
+/* Стили для описания услуги в первом блоке */
+.grid-item:nth-child(4) p {
+    margin-right: 5%;
+}
+
+
+/* Стили для затемненного фона */
+.body-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Цвет и прозрачность фона */
+    z-index: 1; /* Задаем высший z-index, чтобы фон был выше контента */
+  }
+
+
+  body.modal-open {
+    overflow: hidden;
+}
+  
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 80%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Добавленные стили для отображения модального окна */
+.modal.show {
+    opacity: 1;
+}
+
+/* Стили для контента внутри модального окна */
+#priceListModal .modal-content {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 3px solid #2511a9; /* Добавляем рамку */
+}
+
+/* Стили для кнопки "Закрыть" в модальном окне */
+#priceListModal .modal-content button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    cursor: pointer;
+    background: linear-gradient(to right,rgb(51, 33, 172), #616bff);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Стили для кнопки "Закрыть" при наведении */
+#priceListModal .modal-content button:hover {
+    background-color: #5d695e; /* Темнозеленый цвет при наведении */
+}
+
+/* Обновленные стили для заголовка "Наши услуги" в модальном окне */
+#priceListModal .services h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Обновленные стили для каждого элемента списка услуг в модальном окне */
+#priceListModal .services li {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    line-height: 1.4;
+}
+
+  
+  .price-list-button {
+    background-color: rgb(51, 33, 172);
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 50px;
+    font-size: larger;
+  }
+  
+  .price-list-button:hover {
+    background-color: rgb(41, 23, 152);
+  }
+  
+
+.feedback-section {
+    padding: 15px 0;
+    height: auto;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    
+}
+
+.background{
+    background: linear-gradient(to right, rgb(51, 33, 172),  rgb(196, 198, 255));
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 100%; /* Длина гирлянды */
+    height: 5px;
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); /* Цвета гирлянды */
+    border-radius: 5px; /* Радиус закругления для создания эффекта лампочек */
+    transform: translateX(-50%);
+    background-size: 200% 100%;
+    animation: garland 2s linear infinite; /* Анимация */
+}
+
+@keyframes garland {
+    0% {
+        background-position: 0 0;
+        transform: translate(-50%, 0);
+    }
+    50% {
+        background-position: 100% 0;
+        transform: translate(-50%, -2px);
+    }
+    100% {
+        background-position: 200% 0;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+
+.feedback-section::before {
+    content: '';
+    background: url('img/free-icon-feedback-1208652.png') no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 10%; /* настройте положение и размер в зависимости от вашего дизайна */
+    top: 36%;
+}
+
+.feedback-section::after {
+    content: '';
+    background: url('img/free-icon-feedback-4301915.png') no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 10%; /* настройте положение и размер в зависимости от вашего дизайна */
+    bottom: 35%;
+}
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.feedback-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+.feedback-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.feedback-header h2 {
+    color: #ffffff;
+    font-size: 40px;
+    position: relative;
+    top: 10px; /* Это значение можно настроить в зависимости от вашего дизайна */
+    font-family: 'Roboto', sans-serif;
+}
+
+.feedback-header p {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.feedback-container form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px; /* Добавлено для отступа вокруг формы */
+    border: 5px solid #ffffff;
+    border-radius: 30px; /* Добавлено для создания круглой рамки */
+    box-sizing: border-box;
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+
+
+.feedback-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+    width: 70%; /* Исправлено значение ширины */
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.feedback-container button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%; /* Исправлено значение ширины */
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.feedback-container button:hover {
+    background-color: #555;
+}
+
+
+form label,
+form input,
+form textarea {
+    font-size: 20px; /* Устанавливаем размер шрифта в пикселях (можете выбрать нужный размер) */
+}
+
+
+/* Стили для подвала (footer) */
+.main-footer {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.center-section {
+    width: 100%;
+}
+
+.center-section h2 {
+    font-size: 44px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+.contact-info p {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.social-icons {
+    text-align:center;
+    
+}
+
+.social-icons img {
+    width: 50px; /* Замените на желаемую ширину */
+    height: auto; /* Сохраняет пропорции изображения */
+    border-radius: 40%;
+    border: 3px solid rgb(255, 255, 255);
+    animation: borderGradient 5s linear infinite;
+}
+
+
+
+.social-icons h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+
+
+/* Дополнительные стили для мобильных устройств */
+@media only screen and (max-width: 767px) {
+    /* ... Ваши предыдущие стили ... */
+
+    /* Стили для секции о нас */
+    .about-section {
+        padding: 4% 2%;
+    }
+
+    .about-header-content h1,
+    .about-header-content h2,
+    .about-header-content p {
+        font-size: 18px;
+    }
+
+    /* Стили для блока "О нас" */
+    .company-info {
+        flex-direction: column;
+    }
+
+    .company-details h3 {
+        font-size: 18px;
+    }
+
+    .company-details p {
+        font-size: 16px;
+    }
+
+    /* Стили для секции услуг */
+    .services-section {
+        padding: 4% 2%;
+    }
+
+    .services-section h1,
+    .services-section h2,
+    .services-section p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /* Стили для сетки блоков услуг на мобильных устройствах */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .grid-item h3 {
+        font-size: 18px;
+    }
+
+    .grid-item p {
+        font-size: 16px;
+    }
+
+    /* Стили для секции обратной связи */
+    .feedback-section::before,
+    .feedback-section::after {
+        display: none;
+    }
+
+    .feedback-container {
+        width: 90%;
+    }
+
+    .feedback-header h2 {
+        font-size: 24px;
+    }
+
+    .feedback-header p {
+        font-size: 18px;
+    }
+
+    .feedback-container form {
+        width: 100%;
+    }
+
+    .feedback-container label,
+    .feedback-container input,
+    .feedback-container textarea {
+        font-size: 16px;
+    }
+
+    .feedback-container button {
+        width: 80%;
+    }
+
+    /* Стили для модального окна обратной связи */
+    #priceListModal .modal-content {
+        border-radius: 15px;
+    }
+
+    #priceListModal .services h2 {
+        font-size: 20px;
+    }
+
+    #priceListModal .services li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #priceListModal .modal-content button {
+        padding: 10px 20px;
+    }
+
+    /* Стили для затемненного фона на мобильных устройствах */
+    .body-overlay {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    /* Стили для подвального блока */
+    .main-footer {
+        padding: 20px 0;
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .right-section img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        border: 3px solid #000000;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    /* Стили для социальных иконок на мобильных устройствах */
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+        border-radius: 30%;
+        border: 3px solid rgb(255, 255, 255);
+        margin-bottom: 10px;
+    }
+
+    /* Стили для секции контактной информации в подвале на мобильных устройствах */
+    .contact-info h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+    }
+
+    /* Стили для блока с социальными иконками в подвале */
+    .social-icons h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .social-icons a {
+        margin-right: 15px;
+    }
+}
+
+ /* Стили для секции блога */
+ .blog-section {
+    padding: 4% 2%;
+}
+
+.blog-header-content h1,
+.blog-header-content h2,
+.blog-header-content p {
+    font-size: 18px;
+}
+
+/* Стили для сетки блоков блога на мобильных устройствах */
+.blog-grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.blog-grid-item h3 {
+    font-size: 18px;
+}
+
+.blog-grid-item p {
+    font-size: 16px;
+}
+
+/* Стили для секции карты */
+.map-section {
+    padding: 4% 2%;
+}
+
+.map-header-content h1,
+.map-header-content h2,
+.map-header-content p {
+    font-size: 18px;
+}
+
+/* Стили для карты на мобильных устройствах */
+#map {
+    height: 300px;
+}
+
+/* Стили для секции подписки */
+.subscribe-section {
+    padding: 4% 2%;
+}
+
+.subscribe-header-content h1,
+.subscribe-header-content h2,
+.subscribe-header-content p {
+    font-size: 18px;
+}
+
+/* Стили для формы подписки на мобильных устройствах */
+.subscribe-form label,
+.subscribe-form input,
+.subscribe-form button {
+    font-size: 16px;
+}
+
+.subscribe-form button {
+    width: 100%;
+}

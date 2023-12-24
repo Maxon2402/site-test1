@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINELNIKOV STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content-content">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>SINELNIKOV STUDIO</h1>
+                </div>
+                <nav class="left-nav">
+                    <ul>
+                        <li><a href="#" onclick="scrollToCompanyInfo()">О компании</a></li>
+                        <li><a href="#" onclick="scrollToServices()">Услуги</a></li>
+                        <li><a href="#" onclick="scrollToBackground()">Обратная связь</a></li>
+                        <li><a href="#" onclick="scrollToFooter()">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="right-nav">
+                    <ul>
+                        <li><a href="#" id="loginButton" class="popup-trigger">Вход</a></li>
+                        <li><a href="#" id="registerButton" class="popup-trigger">Регистрация</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <div id="loginPopup" class="popup-container">
+        <!-- Добавлено: Крестик для закрытия окна -->
+        <button class="close-button" onclick="closePopup()">×</button>
+        <!-- Содержимое всплывающего окна для Входа -->
+        <h3>Вход</h3>
+        <form>
+            <!-- Поля для ввода данных -->
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+    
+    <div id="registerPopup" class="popup-container">
+        <!-- Добавлено: Крестик для закрытия окна -->
+        <button class="close-button" onclick="closePopup()">×</button>
+        <!-- Содержимое всплывающего окна для Регистрации -->
+        <h3>Регистрация</h3>
+        <form>
+            <!-- Поля для ввода данных -->
+            <label for="firstName">Имя:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Фамилия:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+    
+    
+
+    
+    <section class="second-section">
+            <div class="common">
+                <div class="second-header-content">
+                    <h2>Фотосалон</h2>
+                    <h1>SINELNIKOV STUDIO</h1>
+                    <p>Запечатлите свои лучшие моменты вместе с нами!</p>
+                    <button class="scroll-button" onclick="scrollToCompanyInfo()">
+                        <img src="img/Стрелка.png" alt="Стрелка">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="company-info">
+            <div class="info-content">
+                <div class="company-details">
+                    <h3>О Компании SINELNIKOV STUDIO</h3>
+                    <p>SINELNIKOV STUDIO - то место, где всегда будут рады помочь Вам сделать удачные фото на документы, распечатать лучшие моменты Вашей жизни и быстро отсканировать/ распечатать документы по привлекательным ценам. Также наши сотрудники помогут подобрать индивидуальные, приятные подарки для Вас и Ваших близких.</p>
+                </div>
+                <div class="logo-photo img">
+                    <img src="img/на прозрачном.png" alt="Логотип компании">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-content">
+                <div class="services-titles">
+                    <h2>Услуги</h2>
+                    <h1>Откройте для себя наши возможности</h1>
+                    <p>Воспользуйтесь лучшими фотоуслугами в студии SINELNIKOV STUDIO</p>
+                </div>
+            </div>
+        </div>
+    
+    <div class="grid-container">
+        <div class="grid-item">
+          <div class="icon-container">
+             <img src="img/photo-camera.png" alt="Icon 1">
+         </div>
+          <div class="text-container">
+              <h3>Фото на документы</h3>
+             <p>Качественные фотографии для ваших документов.</p>
+           </div>
+     </div>
+     <div class="grid-item">
+            <div class="icon-container">
+                <img src="img/Ламинация.png" alt="Icon 2">
+           </div>
+           <div class="text-container">
+             <h3>Ламинирование документов</h3>
+              <p>Продлите срок службы ваших фотографий.</p>
+           </div>
+     </div>
+     <div class="grid-item">
+            <div class="icon-container">
+             <img src="img/Инпрув.png" alt="Icon 3">
+          </div>
+           <div class="text-container">
+               <h3>Реставрация фотографий</h3>
+              <p>Восстановление и сохранение ваших старых фотографий.</p>
+         </div>
+      </div>
+      <div class="grid-item">
+          <div class="icon-container">
+                <img src="img/Принтер.png" alt="Icon 4">
+            </div>
+            <div class="text-container">
+                <h3>Распечатка фотографий</h3>
+               <p>Печать ваших любимых моментов в высоком качестве.</p>
+           </div>
+     </div>
+    </div>
+
+    <button class="price-list-button" onclick="openPriceList()">Прайс-лист</button>
+    <div class="body-overlay" id="bodyOverlay"></div> 
+    <div id="priceListModal" class="modal show">
+      <div class="modal-content">
+        <div class="services">
+          <h2>Наши услуги</h2>
+          <ul>
+            <li data-service="Фото на документы" data-price="">Фото на документы - 300₽</li>
+            <li data-service="Ламинирование документов" data-price="">Ламинирование документов - 160₽</li>
+            <li data-service="Реставрация фотографий" data-price="">Реставрация фотографий - 500₽</li>
+            <li data-service="Распечатка фотографий" data-price="">Распечатка фотографий - 160₽</li>
+          </ul>
+        </div>
+        <div id="priceDisplay" class="price-display"></div>
+        <button onclick="closePriceList()">Закрыть</button>
+      </div>
+    </div>
+     
+
+ 
+   <div class="background">
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <div class="feedback-header">
+                <h2>Обратная связь</h2>
+                <p>Оставьте ваш отзыв или задайте вопрос</p>
+            </div>
+            <form>
+                <!-- Поля для ввода данных -->
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+   </div> 
+    
+<!-- Добавлен подвальный блок (footer) -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="center-section">
+            <h2>SINELNIKOV STUDIO</h2>
+            
+            <div class="divider"></div>
+        </div>
+        <div class="left-section">
+            <div class="contact-info">
+                <p>Адрес: г.Ногинск, ул.Соборная, д.4</p>
+                <p>Телефон: +7-996-715-55-41</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="social-icons">
+                <h3>Мы в социальных сетях</h3>
+                <!-- Добавьте иконки для социальных сетей -->
+                <a href="" target="_blank" title="Инста"><img src="img/free-icon-instagram-2111463.png" alt="Instagram"></a>
+                <a href="https://vk.com/sobornaya4a" target="_blank" title="Вк"><img src="img/free-icon-vk-2504953.png" alt="VK"></a>
+                <a href="https://api.whatsapp.com/send?phone=89967155541" target="_blank" title="Васап"><img src="img/free-icon-whatsapp-3536445.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>

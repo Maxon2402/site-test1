@@ -1,0 +1,264 @@
+/* Общие стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0 auto; /* Центрирование блока */
+   
+}
+
+
+.main-header {
+    background-color: rgb(51, 33, 172);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 55px;
+    overflow: hidden;
+    background-color: white;
+    padding: 1.25em;
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px; /* Увеличенный отступ между пунктами меню */
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+a:hover {
+    color: #000000; /* Изменяем цвет при наведении */
+}
+/* Второй блок */
+.second-section {
+    background-color: rgb(51, 33, 172);
+    color: white;
+    text-align: center;
+    padding: 4%;
+    height: auto;
+    margin: 0 auto; /* Центрирование блока */
+}
+
+
+.second-header-content h1 {
+    font-size: 4.375em; /* Увеличенный размер шрифта */
+    font-weight: bold;
+    margin: 2%;
+}
+
+.second-header-content h2 {
+    font-size: 5em; /* Увеличенный размер шрифта */
+    font-weight: bold;
+    margin: 0;
+}
+
+.second-header-content p {
+    font-size: 1.25em; /* Увеличенный размер шрифта */
+    margin-top: 3%;
+}
+
+.scroll-button {
+    background-color: rgb(51, 33, 172);
+    color: white;
+    border: none;
+    padding: 1% ; /* Увеличенные отступы кнопки */
+    font-size: 1.20em; /* Увеличенный размер шрифта */
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.scroll-button img {
+    margin-right: 1.43%;
+    width: 7em; /* Увеличенные размеры изображения */
+    height: 7em; /* Увеличенные размеры изображения */
+}
+
+
+
+
+/* Блок с информацией о компании */
+.company-info {
+    color: #000;
+    display: flex;
+    text-align: left;
+    padding: 1.25em;
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+    width: 90%;
+    justify-content: center;
+    max-width: 1400px;
+    
+}
+
+
+.info-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-details {
+    flex: 1;
+    margin-right: 2.86%;
+    margin-top: 3%;
+}
+
+.company-details h3 {
+    font-size: 2.6em;
+    margin: 0;
+    white-space: nowrap; /* Запрещаем перенос слов */
+}
+
+.company-details p {
+    font-size: 1.25em; /* Немного увеличим размер шрифта */
+    line-height: 1.6; /* Увеличим межстрочный интервал для лучшей читаемости */
+    color: #333; /* Черный цвет текста для лучшего контраста */
+    margin-bottom: 15px; /* Небольшой отступ снизу для улучшения визуального восприятия */
+}
+
+.company-details p:first-child {
+    font-weight: bold; /* Сделаем первый абзац полужирным */
+}
+
+.company-details p a {
+    color: #5E8DFF; /* Цвет ссылок */
+    text-decoration: underline; /* Подчеркивание для ссылок */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.company-details p a:hover {
+    color: #2A4CFF; /* Цвет ссылок при наведении */
+}
+
+.logo-photo {
+    max-width: 23.75em;
+    margin-right: 40px;
+}
+
+.logo-photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Родительская секция */
+.services-section {
+    background-color: #f0f0f0; /* Цвет фона блока услуг */
+    text-align: center; /* Центрирование текста */
+    padding: 50px 0; /* Внутренние отступы */
+}
+
+
+/* Контейнер для заголовков */
+.services-titles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+
+
+.services-section h2 {
+    color: #2A4CFF; /* Синий цвет для мини-заголовка "Услуги" */
+    font-size: 1.5em; /* Размер мини-заголовка */
+}
+
+.services-section h1 {
+    color: #000; /* Черный цвет для жирного заголовка */
+    font-size: 2.2em; /* Размер жирного заголовка */
+}
+
+.services-section p {
+    color: #333; /* Цвет подзаголовка */
+    font-size: 1.5em; /* Размер подзаголовка */
+}
+
+/* Стили для сетки блоков */
+
+/* Стили для родительского контейнера */
+.grid-container {
+    max-width: 1400px; /* Пример ограничения ширины сетки */
+    margin: 0 auto; /* Центрируем по горизонтали */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонны равной ширины */
+    gap: 30px; /* Отступ между блоками */
+    justify-content: space-between; /* Распределяем блоки равномерно по горизонтали */
+}
+
+/* Стили для каждого блока в сетке */
+.grid-item {
+    display: flex;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    height: auto;
+    width: 85%;
+}
+
+.grid-item .icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Расстояние между значком и текстом */
+}
+
+.grid-item .icon-container img {
+    width: 60px;
+    height: 60px;
+    margin-top: -60px;
+}
+
+.grid-item .text-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для первой колонки */
+.grid-item:nth-child(2n+1) {
+    margin-left: 9%; 
+}
+
+/* Стили для заголовка */
+.grid-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+/* Стили для описания услуги */
+.grid-item p {
+    font-size: 1em;
+    text-align: start; /* Левое выравнивание текста */
+    color: #555;
+}
+
+
+
